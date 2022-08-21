@@ -2,7 +2,7 @@
 from __future__ import annotations
 from datetime import timedelta
 import logging
-from typing import Any, Dict
+from typing import TYPE_CHECKING, Dict
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_API_TOKEN
@@ -10,7 +10,10 @@ from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryAuthFailed
 from homeassistant.helpers.update_coordinator import UpdateFailed
 
-from switchbot import Device, SwitchBot # pylint: disable=import-error
+from switchbot_cloud import SwitchBot
+
+if TYPE_CHECKING:
+    from switchbot_cloud import Device
 
 from .coordinator import SwitchBotDataUpdateCoordinator
 from .const import DATA_COORDINATOR, DOMAIN

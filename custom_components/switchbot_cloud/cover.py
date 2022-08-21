@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import logging
-from typing import Any
+from typing import TYPE_CHECKING
 
 from homeassistant.components.cover import (
     ATTR_CURRENT_POSITION,
@@ -22,7 +22,8 @@ from homeassistant.helpers.update_coordinator import (
     CoordinatorEntity,
 )
 
-from switchbot.devices import Curtain # pylint: disable=import-error
+if TYPE_CHECKING:
+    from switchbot_cloud.devices import Curtain
 
 from .const import DATA_COORDINATOR, DOMAIN, TYPE_CURTAIN
 from .coordinator import SwitchBotDataUpdateCoordinator

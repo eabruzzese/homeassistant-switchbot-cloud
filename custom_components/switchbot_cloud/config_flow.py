@@ -12,7 +12,7 @@ from homeassistant.const import CONF_API_TOKEN
 from homeassistant.data_entry_flow import FlowResult
 from homeassistant.exceptions import HomeAssistantError
 
-from switchbot import SwitchBot # pylint: disable=import-error
+from switchbot_cloud import SwitchBot
 
 from .const import DOMAIN
 

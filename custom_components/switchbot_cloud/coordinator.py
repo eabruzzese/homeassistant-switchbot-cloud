@@ -1,6 +1,8 @@
-from typing import Any
-from switchbot import SwitchBot # pylint: disable=import-error
+from typing import TYPE_CHECKING, Any
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
+
+if TYPE_CHECKING:
+    from switchbot_cloud import SwitchBot
 
 
 class SwitchBotDataUpdateCoordinator(DataUpdateCoordinator):
