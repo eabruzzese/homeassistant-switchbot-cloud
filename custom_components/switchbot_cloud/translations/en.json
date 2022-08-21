@@ -1,0 +1,21 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Device is already configured"
+        },
+        "error": {
+            "cannot_connect": "Failed to connect",
+            "invalid_auth": "Invalid authentication",
+            "unknown": "Unexpected error"
+        },
+        "step": {
+            "user": {
+                "title": "API Token Configuration",
+                "description": "Retrieve your SwitchBot API token by following [these steps](https://github.com/OpenWonderLabs/SwitchBotAPI#getting-started).",
+                "data": {
+                    "api_token": "API Token"
+                }
+            }
+        }
+    }
+}
