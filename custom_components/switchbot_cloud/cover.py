@@ -62,7 +62,7 @@ class SwitchBotCurtain(CoordinatorEntity, CoverEntity, RestoreEntity):
         SUPPORT_OPEN | SUPPORT_CLOSE | SUPPORT_SET_POSITION
     )
 
-    def __init__(self, coordinator: SwitchBotDataUpdateCoordinator, device: Curtain):
+    def __init__(self, coordinator: SwitchBotDataUpdateCoordinator, device: "Curtain"):
         super().__init__(coordinator)
         self.device = device
 

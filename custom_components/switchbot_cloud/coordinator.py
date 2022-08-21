@@ -8,8 +8,8 @@ if TYPE_CHECKING:
 class SwitchBotDataUpdateCoordinator(DataUpdateCoordinator):
     """A thin wrapper around the DataUpdateCoordinator to store an API instance."""
 
-    api: SwitchBot
+    api: "SwitchBot"
 
-    def __init__(self, *args: Any, api: SwitchBot, **kwargs: Any) -> None:
+    def __init__(self, *args: Any, api: "SwitchBot", **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
         self.api = api

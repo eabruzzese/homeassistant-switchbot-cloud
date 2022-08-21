@@ -29,7 +29,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     switchbot = SwitchBot(token=entry.data[CONF_API_TOKEN])
 
-    async def async_update_data() -> Dict[str, Device]:
+    async def async_update_data() -> Dict[str, "Device"]:
         try:
             # Fetch each cloud-enabled device and its status.
             devices = [d for d in await hass.async_add_executor_job(switchbot.devices) if d.cloud_enabled]
