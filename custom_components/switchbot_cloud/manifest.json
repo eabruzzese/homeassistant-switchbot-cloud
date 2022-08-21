@@ -4,7 +4,7 @@
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/switchbot_cloud",
   "requirements": [
-    "switchbot-cloud==0.2.4"
+    "switchbot-cloud==0.2.5"
   ],
   "ssdp": [],
   "zeroconf": [],
